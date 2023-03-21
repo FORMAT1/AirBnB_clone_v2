@@ -60,7 +60,7 @@ class FileStorage:
         if not obj:
             return
         keys = FileStorage.__objects.keys()
-        obj_key = f'{obj.__class__.__name__}' + '.' + obj.id
+        obj_key = f'{obj.__class__.__name__} + '.' + obj.id'
         if obj_key in keys:
             del FileStorage.__objects[obj_key]
             self.save()
