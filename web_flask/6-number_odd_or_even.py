@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A  script that start Flask application
+start Flask application
 """
 
 from flask import Flask, render_template
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
+def index():
     """returns Hello HBNB!"""
     return 'Hello HBNB!'
 
@@ -39,13 +39,13 @@ def number(n):
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def numbers_templates(n):
+def numbersandtemplates(n):
     """display a HTML page only if n is an integer"""
     return render_template('5-number.html', n=n)
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
-def numbers_and_evenness(n):
+def numbersandevenness(n):
     """display a HTML page only if n is an integer"""
     if n % 2 == 0:
         evenness = 'even'
