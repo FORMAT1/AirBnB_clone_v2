@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A script that start Flask application
+starts a Flask web application
 """
 
 from flask import Flask, render_template
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
+def index():
     """returns Hello HBNB!"""
     return 'Hello HBNB!'
 
@@ -33,7 +33,7 @@ def pythoniscool(text='is cool'):
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
-def number(n):
+def imanumber(n):
     """display “n is a number” only if n is an integer"""
     return "{:d} is a number".format(n)
 
